@@ -115,6 +115,41 @@
           }
         }
       }
+    },
+    "tap-utils": {
+      "projectType": "library",
+      "root": "projects/tap-utils",
+      "sourceRoot": "projects/tap-utils/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/tap-utils/tsconfig.lib.json",
+            "project": "projects/tap-utils/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/tap-utils/src/test.ts",
+            "tsConfig": "projects/tap-utils/tsconfig.spec.json",
+            "karmaConfig": "projects/tap-utils/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/tap-utils/tsconfig.lib.json",
+              "projects/tap-utils/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "demo"
 }

@@ -18,6 +18,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "tap-utils": [
+        "dist/tap-utils"
+      ],
+      "tap-utils/*": [
+        "dist/tap-utils/*"
+      ]
+    }
   }
 }
